@@ -1,6 +1,7 @@
 public class card{
-	private int rank;
 	private int suit;
+	private int rank;
+	
 	
 	public card(int s, int r){
 		suit = s;
@@ -24,6 +25,10 @@ public class card{
 		else{
 			return "spades";
 		}
+	}
+	
+	public card clone(){
+		return new card(suit, rank);
 	}
 	
 }

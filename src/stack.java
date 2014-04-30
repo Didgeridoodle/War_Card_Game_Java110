@@ -1,10 +1,13 @@
+import java.util.Random;
+
 public class stack{
 	//Used for storing a stack of cards
+	public static int stacksize = 52;
 	private int curind;
 	private card[] cardlist;
 	
 	public stack(){
-		cardlist = new card[52];
+		cardlist = new card[stacksize];
 		int count = 0;
 		for(int i = 0; i < 4; i++){
 			for(int k = 1; k < 14; k++){
@@ -16,7 +19,7 @@ public class stack{
 	public stack(int o){
 		//used to create war stacks
 		curind = 0;
-		cardlist = new card[52];
+		cardlist = new card[stacksize];
 	}
 	
 	public void addcard(card ac){
@@ -35,6 +38,16 @@ public class stack{
 	
 	public card getcard(int i){
 		return cardlist[i];
+	}
+	
+	public void shuffle(){
+		Random rnd = new Random();
+		for(int i = 0; i < cardlist.length; i++){
+			int index = rnd.nextInt()+1;
+			card hold = cardlist[index];
+			cardlist[index] = cardlist[i];
+			cardlist[i] = hold;
+		}
 	}
 	
 }
