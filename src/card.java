@@ -27,8 +27,48 @@ public class card{
 		}
 	}
 	
-	public card clone(){
-		return new card(suit, rank);
+	public String getcardname(){
+		String mess = "";
+		if(rank<=10){
+			mess = String.valueOf(rank);
+		}
+		else if(rank==11){
+			mess = "jack";
+		}
+		else if(rank==12){
+			mess = "queen";
+		}
+		else if(rank==13){
+			mess = "king";
+		}
+		else{
+			mess = "ace";
+		}
+		
+		if(suit==0){
+			mess += "c.jpg";
+		}
+		else if(suit==1){
+			mess += "d.jpg";
+		}
+		else if(suit==2){
+			mess += "h.jpg";
+		}
+		else{
+			mess += "s.jpg";
+		}
+		
+		return mess;
+	}
+	
+	
+	public boolean equals(card test){
+		if(rank==test.getrank()){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 	
 }

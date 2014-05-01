@@ -10,7 +10,7 @@ public class stack{
 		cardlist = new card[stacksize];
 		int count = 0;
 		for(int i = 0; i < 4; i++){
-			for(int k = 1; k < 14; k++){
+			for(int k = 2; k < 15; k++){
 				cardlist[count] = new card(i,k);
 			}
 		}
