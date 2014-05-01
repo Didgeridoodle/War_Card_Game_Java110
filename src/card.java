@@ -3,6 +3,9 @@ public class card{
 	private int rank = 0;
 	
 	
+	public card(){
+	}
+	
 	public card(int s, int r){
 		suit = s;
 		rank = r;
@@ -41,9 +44,10 @@ public class card{
 		else if(rank==13){
 			mess = "king";
 		}
-		else{
+		else if(rank==14){
 			mess = "ace";
 		}
+		
 		
 		if(suit==0){
 			mess += "c.jpg";
@@ -60,7 +64,11 @@ public class card{
 		
 		return mess;
 	}
+
 	
+	public card clone(){
+		return new card(suit,rank);
+	}
 	
 	public boolean equals(card test){
 		if(rank==test.getrank()){

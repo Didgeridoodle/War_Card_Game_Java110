@@ -12,6 +12,7 @@ public class stack{
 		for(int i = 0; i < 4; i++){
 			for(int k = 2; k < 15; k++){
 				cardlist[count] = new card(i,k);
+				count++;
 			}
 		}
 	}
@@ -22,9 +23,12 @@ public class stack{
 		cardlist = new card[stacksize];
 	}
 	
-	public void addcard(card ac){
+	//Adds a card to the array and returns it's position
+	public int addcard(card ac){
 		cardlist[curind] = ac;
-		curind += 1;
+		curind++;
+		int retval = curind-1;
+		return retval;
 	}
 	
 	private stack(card[] cli){
@@ -38,6 +42,19 @@ public class stack{
 	
 	public card getcard(int i){
 		return cardlist[i];
+	}
+	
+	public void refactorlist(int i){
+		//Moves elements up in the list, 0 is the top
+		int hold = curind;
+		for(int k = 0; k < hold-i; k++){
+			cardlist[k] = cardlist[k+i];
+		}
+		curind = curind - i;
+	}
+	
+	public int checksize(){
+		return curind;
 	}
 	
 	public void shuffle(){
