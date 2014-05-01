@@ -1,6 +1,6 @@
 public class card{
-	private int suit;
-	private int rank;
+	private int suit = 0;
+	private int rank = 0;
 	
 	
 	public card(int s, int r){

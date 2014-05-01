@@ -1,4 +1,6 @@
 public class war{
+	private stack pfield;
+	private stack cfield;
 	private stack pdeck;
 	private stack cdeck;
 	
@@ -20,6 +22,15 @@ public class war{
 			}
 		}
 		//Splits decks up into probably equal piles
+	}
+	
+	public int getstate(){
+		return 0;
+	}
+	
+	public card[] next(){
+		//First and second cards are the ones currently in the war
+		return null;
 	}
 	
 }

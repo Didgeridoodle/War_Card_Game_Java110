@@ -43,7 +43,7 @@ public class stack{
 	public void shuffle(){
 		Random rnd = new Random();
 		for(int i = 0; i < cardlist.length; i++){
-			int index = rnd.nextInt()+1;
+			int index = rnd.nextInt(51)+1;
 			card hold = cardlist[index];
 			cardlist[index] = cardlist[i];
 			cardlist[i] = hold;
