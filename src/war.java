@@ -14,11 +14,11 @@ public class war{
 		for(int i = 0; i < stack.stacksize; i++){
 			if(alter==false){
 				alter = true;
-				pdeck.addcard(tempdeck.getcard(i).clone());
+				pdeck.addcard(tempdeck.getcard(i));
 			}
 			else{
 				alter = false;
-				cdeck.addcard(tempdeck.getcard(i).clone());
+				cdeck.addcard(tempdeck.getcard(i));
 			}
 		}
 		//Splits decks up into probably equal piles
