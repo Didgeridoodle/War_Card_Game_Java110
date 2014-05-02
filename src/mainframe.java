@@ -42,7 +42,7 @@ class mainframe{
 							cmds[0] = hold[1];
 							cmds[1] = hold[2];
 							cmds[2] = hold[3];
-							
+							//todo cmds 3 and 4 for card index
 						}
 						else{
 							game = new war();
