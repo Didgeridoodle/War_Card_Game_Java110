@@ -159,7 +159,7 @@ public class scene extends Canvas implements MouseListener, MouseMotionListener{
 	
 	
 	//I really don't remember what the update and paint things do
-	//I made these for my 3d rendering practice at the beginning of the semester to prove to myself I could program java to a fair extent
+	//I made these for my 3d rendering practice at the beginning of the semester
 	public void update(Graphics g){	
 		g.drawImage(backbuffer, 0, 0, this);
 	}
